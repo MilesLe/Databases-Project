@@ -1,0 +1,46 @@
+Name,gender,race,age,Ticker,Company,Sector,Market Cap
+Jeff Bezos,Male,White,57,AMZN,Amazon,XLY,1590B
+Elon Musk,Male,White,49,TSLA,Tesla,XLY,635.18B
+Craig Menear,Male,White,63,HD,Home Depot,XLY,331.47B
+Chris Kempczinski,Male,White,52,MCD,McDonalds,XLY,167.91B
+John Donahoe,Male,White,60,NKE,Nike,XLY,208.93B
+David S. Taylor,Male,White,62,PG,Procter Gamble,XLP,330.66B
+James Quincey,Male,White,56,KO,Coca Cola,XLP,226.28B
+Doug McMillon,Male,White,54,WMT,Walmart,XLP,382.05B
+Ramon Laguarta,Male,White,58,PEP,PepsiCo,XLP,194.97B
+Billy Gifford,Male,White,51,MO,Altria,XLP,94.79B
+Darren Woods,Male,White,55,XOM,ExxonMobil,XLE,242.96B
+Michael Wirth,Male,White,61,CVX,Chevron,XLE,203.71B
+Ryan Lance,Male,White,58,COP,Conoco Philips,XLE,73.04B
+Olivier Le Peuch,Male,White,57,SLB,Schlumberger,XLE,39.29B
+Mark G. Papa,Male,White,73,EOG,EOG Resources,XLE,43.97B
+Warren Buffett,Male,White,90,BRK.B,Berkshire Hathaway,XLF,594.92B
+Jamie Dimon,Male,White,65,JPM,JPMorgan Chase,XLF,469.05B
+Brian Moynihan,Male,White,61,BAC,Bank Of America,XLF,340.69B
+Charles W. Scharf,Male,White,55,WFC,Wells Fargo ,XLF,163.84B
+Michael Corbat,Male,White,60,C,Citigroup,XLF,152.62B
+Alex Gorsky,Male,White,60,JNJ,Johns and Johnson,XLV,428.68B
+David S. Wichmann,Male,White,59,UNH,United Health Group,XLV,347.00B
+Robert Ford,Male,White,47,ABT,Abbot Laboratories,XLV,210.71B
+Richard A. Gonzalez,Male,Hispanic,67,ABBV,AbbVie,XLV,191.52B
+Albert Bourla,Male,White,59,PFE,Pfizer,XLV,202.49B
+Darius Adamczyk,Male,White,55,HON,Honeywell,XLI,150.78B
+Lance M. Fritz,Male,White,58,UNP,Union Pacific Corporation,XLI,147.50B
+Jim Umpleby,Male,White,63,CAT,Caterpillar,XLI,126.91B
+Carol B. Tomé,Female,White,64,UPS,United Parcel Service,XLI,148.91B
+Dave Calhoun,Male,White,63,BA,Boeing,XLI,147.64B
+Steve Angel,Male,White,65,LIN,Linde plc,XLB,146.83B
+Seifi Ghasemi,Male,White,77,APD,Air Products and Chemicals,XLB,63.04B
+John G. Morikis,Male,White,56,SHW,Sherwin-Williams,XLB,22.28B
+Christophe Beck,Male,White,52,ECL,Ecolab,XLB,62.04B
+Richard Adkerson,Male,White,74,FCX,Freeport-McMoRan,XLB,49.24B
+Tim Cook,Male,White,60,AAPL,Apple,XLK,2060B
+Satya Nadella,Male,Asian,53,MSFT,Microsoft,XLK,1830B
+Alfred F Kelly Jr,Male,White,62,V,Visa,XLK,463.49B
+Jensen Huang,Male,Asian,58,NVDA,Nvidia,XLK,342.53B
+Michael Miebach,Male,White,51,MA,Mastercard,XLK,360.89B
+James L Robo,Male,White,57,NEE,NextEra Energy,XLU,148.50B
+Lynn Good,Female,White,62,DUK,Duke Energy,XLU,74.06B
+Thomas A. Fanning,Male,White,64,SO,Southern Company,XLU,65.86B
+Thomas F. Farrell II,Male,White,67,D,Dominion Energy,XLU,61.03B
+Christopher M. Crane,Male,White,61,EXC,Exelon,XLU,42.89B

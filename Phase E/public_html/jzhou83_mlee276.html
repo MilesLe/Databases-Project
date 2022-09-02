@@ -1,0 +1,171 @@
+<!-- ps.html Prepared Statement demo -->
+
+<html>
+	<head>
+		<title>Miles and Jeremy Databases Final Project: Stock Market Analysis </title>
+	  </head>
+   <body>
+	<h2><u>Miles and Jeremy Databases Final Project: Stock Market Analysis </u></h2>
+	<p> Available Market Indexes in our database: DIA, QQQ,SPY</p>
+	<p> Available dates for Market Indexes: 1999-03-10 to 2017-11-10</p>
+	<p> Available bonds in our databbse: US10YR, US5YR, US6MO</p>
+	<p> Available dates for bonds: 2011-04-05 to 2021-04-05</p>
+	<p> Available Sectors in our database: XLB, XLE, XLF, XLI, XLK, XLP, XLU, XLV, XLY</p>
+	<p> Available dates for Option Volume: 2013-04-06 to 2015-04-01</p>
+	<p> Available dates for Sector ETFs: 2005-02-25 to 2017-11-10</p>
+	<p> Database Tables: 
+		<ul>
+			<li>Bond (ticker, date, price, open price, high, low, percent change) </li>
+			<li>Company (CEO name, gender, race, age, ticker, comapny name, sector, market cap) </li>
+			<li>MarketIndex (ticker, date,open price, high, low, close price, volume) </li>
+			<li>OptionVolume (ticker, date, call volume, put volume, put-call ratio) </li>
+			<li>SectorETF (ticker, date, open price, high, low, close price, volume) </li>
+	</ul> 
+	</p>
+	<p>Note: Input date error checking is designed for the full database use, not the small-databases use.</p>
+	
+
+	<h3> Insert Tuple: </h3>
+	<p>(ex. Database: Bond, Tuple: ('US10YR','2021-04-06',1.72,1.702,1.727,1.702,0.0084)) <br>(ex. Database: Company, Tuple: ('Philip Kim', 'Male', 'Asian', 420, 'PLTR', 'Palantir', 'XLK', 69) - to test foreign key constraint use 'XLL' instead of 'XLK' since XLL isn't a recognized Sector ETF)</p>
+	<p>Make sure the tuples are formatted correctly and include all and only the attributes in the specified database.</p>
+	<form action="Insert.php" method="post">
+		Database: <input type="text" name="database"> <br/>
+		Tuple: <input type="text" name="tuple"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Delete Tuple: </h3>
+	<p>(ex. Database: 'Bond', Ticker: 'US10YR', Date: '04/06/2021')<br>(ex. Database: 'Company', Ticker: PLTR, Name: 'Philip Kim')</p>
+	<p> Instructions: For database Company, requires Ticker and Name. For all other databases (SectorETF, etc. ), require Ticker and Date.</p>
+	<form action="Delete.php" method="post">
+		Database: <input type="text" name="database"> <br/>
+		Ticker: <input type="text" name="ticker"> <br/>
+		Date: <input type="date" name="specDate"> <br/>
+		Name: <input type="text" name="name"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q1: In the week of ______ (ex. 01-06-2014), which sector performed the best? What was the price at the end of week and the average volume?</h3>
+	<form action="Q1.php" method="post">
+		Date: <input type="date" name="weekDate"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q2: On what days were all the sectors green except for the ___ (ex. XLB) sector?</h3>
+	<form action="Q2.php" method="post">
+		Ticker: <input type="text" name="ticker"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q3: How many days per month the ___ (ex. XLK) sector increase while the ___ (ex. XLI) sector decreased in the year _____ (ex. 2014)? </h3>
+	<form action="Q3.php" method="post">
+		Ticker: <input type="text" name="ticker1"> <br/>
+		Ticker: <input type="text" name="ticker2"> <br/>
+		Year: <input type="text", name="yearNum"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q4: For market index ___ (ex. SPY), of the top 10 number of days between ____ (ex. 01-01-2014) and ____ (ex. 03-01-2014) with the greatest volume, which dates were green? What were the opening and closing prices on those days?</h3>
+	<form action="Q4.php" method="post">
+		Ticker: <input type="text" name="inputTicker"> <br/>
+		Date: <input type="date" name="weekDateStart"> <br/>
+		Date: <input type="date" name="weekDateEnd"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q5: What were the top 5 days between ____ (ex. 01-01-2014) and ____ (ex. 03-01-2014) dates that had the largest change in price in the market index ___ (ex. SPY)? How many of these days were green? How many red?</h3>
+	<form action="Q5.php" method="post">
+		Ticker: <input type="text" name="inputTicker"> <br/>
+		Date: <input type="date" name="weekDateStart"> <br/>
+		Date: <input type="date" name="weekDateEnd"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+	
+	<h3> Q6: Of what weeks between ____ (ex. 01-01-2014) and ____ (ex. 03-01-2014) dates were the ___ (ex. US10YR) bond red and the ____ (ex. SPY) index green?</h3>
+	<form action="Q6.php" method="post">
+		Index Ticker: <input type="text" name="indexTicker"> <br/>
+		Bond Ticker: <input type="text" name="bondTicker"> <br/>
+		Date: <input type="date" name="weekDateStart"> <br/>
+		Date: <input type="date" name="weekDateEnd"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q7: Between ____ (ex. 01-01-2014) and ____ (ex. 03-01-2014), of which days with a put/call ratio greater than ___ (ex 1.5)(ratio can only have up to 2 decimal places) did ___ (ex. SPY) index go down?</h3>
+	<form action="Q7.php" method="post">
+		Ticker: <input type="text" name="ticker"> <br/>
+		Ratio: <input type="number" step="0.01" name="ratio"> <br/>
+		Date: <input type="date" name="weekDateStart"> <br/>
+		Date: <input type="date" name="weekDateEnd"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q9: Between ____ (ex. 01-01-2014) and ____ (ex. 03-01-2014) dates of the sectors which increased in value, which companies have CEOs who are non white or non male? </h3>
+	<form action="Q9.php" method="post">
+		Date: <input type="date" name="weekDateStart"> <br/>
+		Date: <input type="date" name="weekDateEnd"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q10: Over all weeks between ____ (ex. 01-01-2014) and ____ (ex. 03-01-2014) where ___ (ex. US10YR) bond is red, for each sector how many of those weeks had an average put/call ratio above ___ (ex. 2)(ratio can only have up to 2 decimal places)? </h3>
+	<form action="Q10.php" method="post">
+		Ticker: <input type="text" name="inputTicker"> <br/>
+		Ratio: <input type="number" step="0.01" name="ratio"> <br/>
+		Date: <input type="date" name="weekDateStart"> <br/>
+		Date: <input type="date" name="weekDateEnd"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q11: Between ____ (ex. 01-01-2014) and ____ (ex. 03-01-2014) dates, for each day of the week what is the average ___ (ex. SPY) index and all sector ETF price percent change and option volume ratio? </h3>
+	<form action="Q11.php" method="post">
+		Ticker: <input type="text" name="ticker"> <br/>
+		Date: <input type="date" name="weekDateStart"> <br/>
+		Date: <input type="date" name="weekDateEnd"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q12: On all the days which are red for ___ (ex. SPY) index, what percent of days had an average percent increase in ___ (ex. US10YR) bond greater than ___ (ex. 0.00) percent (Needs to be 2 decimal places)? </h3>
+	<form action="Q12.php" method="post">
+		Index Ticker: <input type="text" name="indexTicker"> <br/>
+		Bond Ticker: <input type="text" name="bondTicker"> <br/>
+		Percent: <input type="number" step="0.01" name="percent"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q13: For each market index, how many weeks did the index outperform the other two by greater than ___ (ex. 0.001)(Needs to be 3 decimal places) percent? Note: this query takes abuot a minute to run.</h3>
+	<form action="Q13.php" method="post">
+		Threshold: <input type="number" step="0.001" name="threshold">
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q14: Of ___ (ex. XLE) ticker when call volume is greater than ___ (ex. 60000), list the days where the next week had a greater return than SPY index. </h3>
+	<form action="Q14.php" method="post">
+		Ticker: <input type="text" name="inputTicker"> <br/>
+		Volume: <input type="number" name="volume"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+	<h3> Q15: List the months where the ___ (ex. US10YR) bond outperformed the ___ (ex. SPY) index. </h3>
+	<form action="Q15.php" method="post">
+		Index Ticker: <input type="text" name="indexTicker"> <br/>
+		Bond Ticker: <input type="text" name="bondTicker"> <br/>
+		<input type="submit">
+	</form>
+	<br/>
+
+   </body>
+</html>
