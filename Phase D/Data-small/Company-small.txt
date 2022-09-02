@@ -1,0 +1,17 @@
+Name,Gender,Race,Age,Ticker,Company,Sector,MarketCap
+Richard A. Gonzalez,Male,Hispanic,67,ABBV,AbbVie,XLV,191.52B
+Albert Bourla,Male,White,59,PFE,Pfizer,XLV,202.49B
+Darius Adamczyk,Male,White,55,HON,Honeywell,XLI,150.78B
+Lance M. Fritz,Male,White,58,UNP,Union Pacific Corporation,XLI,147.50B
+Jim Umpleby,Male,White,63,CAT,Caterpillar,XLI,126.91B
+Carol B. Tomé,Female,White,64,UPS,United Parcel Service,XLI,148.91B
+Dave Calhoun,Male,White,63,BA,Boeing,XLI,147.64B
+Steve Angel,Male,White,65,LIN,Linde plc,XLB,146.83B
+Seifi Ghasemi,Male,White,77,APD,Air Products and Chemicals,XLB,63.04B
+John G. Morikis,Male,White,56,SHW,Sherwin-Williams,XLB,22.28B
+Christophe Beck,Male,White,52,ECL,Ecolab,XLB,62.04B
+Richard Adkerson,Male,White,74,FCX,Freeport-McMoRan,XLB,49.24B
+Tim Cook,Male,White,60,AAPL,Apple,XLK,2060B
+Satya Nadella,Male,Asian,53,MSFT,Microsoft,XLK,1830B
+Alfred F Kelly Jr,Male,White,62,V,Visa,XLK,463.49B
+David S. Wichmann,Male,White,59,UNH,United Health Group,XLV,347.00B
