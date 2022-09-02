@@ -1,0 +1,45 @@
+﻿Miles Lee - mlee276  
+Jeremy Zhou - jzhou83
+
+
+Process.txt
+1) Briefly document the process (which data came from which URL and in what format, what downloaded columns you needed to remove, which downloaded files contained duplicate values or anomalies and how you removed them, what splitting of files was needed, etc.)
+
+
+We searched for data according to these categories:
+* Each category correlates to a relation in our relation schema.
+* Bond yield (relation: Bond)
+   * Downloaded data from these websites, which correlate to each type of treasury bond we are interested in. 
+      * https://www.investing.com/rates-bonds/u.s.-5-year-bond-yield-historical-data
+      * https://www.investing.com/rates-bonds/u.s.-6-month-bond-yield-historical-data
+      * https://www.investing.com/rates-bonds/u.s.-10-year-bond-yield-historical-data
+      * Dates: 4/05/2011 to 4/05/2021
+   * Needed to sign up for a free account in order to download data for free. 
+   * We added a “ticker” column with the duration of the bond. Then, we combined all three bond data files using python. 
+   * Converted date format to YYYY-MM-DD using python.
+      * relation_processing.ipynb
+
+
+* Stock option volume (relation: OptionVolume)
+   * Downloaded data from this website - 
+      * https://www.theocc.com/Market-Data/Market-Data-Reports/Volume-and-Open-Interest/Volume-Query
+   * In order to download the daily stock data for free, we needed to program a python script to download option calls and put volume for specific stock tickers and dates via HTTP calls for free. This script is available in our submission. 
+      * get_option_volume.ipynb
+   * Converted date format to YYYY-MM-DD using python.
+      * relation_processing.ipynb
+
+
+* Stock price and order volume (relation: SectorETF and MarketIndex)
+   * Downloaded data from this website 
+      * https://www.kaggle.com/borismarjanovic/price-volume-data-for-all-us-stocks-etfs
+   * Downloaded all the stock historical data files. 
+   * We removed the “open interest” column since all the values are zero.
+   * For all sector ETF data files, we added a “ticker” column then appended them together using python.
+      * Same thing was done for market index data files.
+      * relation_processing.ipynb
+
+
+* Identifying ETFs (by sector) and Companies (relation: Company)
+   * Searched online the ETF sectors in SPDR
+   * Per sector, found the ETF’s top five holdings (companies)
+   * Researched the ceo, ceo demographics, and market cap per company.
